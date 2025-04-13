@@ -136,7 +136,7 @@ user_query = st.text_area(
 # AGGRESSIVE SUBMIT BUTTON
 # ----------------------
 # API_URL = "http://127.0.0.1:9999/chat"
-API_URL = "https://your-backend.up.railway.app/chat" 
+API_URL = "https://rchatbot-1.onrender.com" 
 
 if st.button("PREPARE TO BE DESTROYED", type="primary"):
     if not user_query.strip():
