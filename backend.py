@@ -34,7 +34,9 @@ def chat_endpoint(request: RequestState):
 
     response=get_response_from_ai_agent(llm_id, query, allow_search, system_prompt, provider)
     return response
-
+@app.get("/")
+def home():
+    return {"message": "Backend is running! Go to /docs for API"}
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=9999)
+    uvicorn.run(app, host="0.0.0.0", port=10000, timeout_keep_alive=300)  # Added timeout
